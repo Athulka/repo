@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+https://maven.apache.org/xsd/maven-4.0.0.xsd">
+ 
+    <!-- Maven model version -->
+<modelVersion>4.0.0</modelVersion>
+ 
+    <!-- Project coordinates -->
+<groupId>com.example</groupId>
+<artifactId>sample-project</artifactId>
+<version>1.0.0</version>
+<packaging>jar</packaging>
+ 
+    <!-- Project metadata -->
+<name>Sample Maven Project</name>
+<description>A sample Maven project with dependencies</description>
+<url>https://example.com</url>
+ 
+    <!-- Java version configuration -->
+<properties>
+<maven.compiler.source>17</maven.compiler.source>
+<maven.compiler.target>17</maven.compiler.target>
+<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+ 
+    <!-- Dependencies -->
+<dependencies>
+<!-- Gson for JSON parsing -->
+<dependency>
+<groupId>com.google.code.gson</groupId>
+<artifactId>gson</artifactId>
+<version>2.10.1</version>
+</dependency>
+ 
+        <!-- JUnit 5 for testing -->
+<dependency>
+<groupId>org.junit.jupiter</groupId>
+<artifactId>junit-jupiter</artifactId>
+<version>5.10.0</version>
+<scope>test</scope>
+</dependency>
+</dependencies>
+ 
+    <!-- Build configuration -->
+<build>
+<plugins>
+<!-- Maven Compiler Plugin -->
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>3.11.0</version>
+<configuration>
+<source>${maven.compiler.source}</source>
+<target>${maven.compiler.target}</target>
+</configuration>
+</plugin>
+ 
+            <!-- Maven Surefire Plugin for running tests -->
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>3.1.2</version>
+</plugin>
+</plugins>
+</build>
+ 
+</project>
